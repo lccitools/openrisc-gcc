@@ -12,7 +12,7 @@ wget http://www.mpfr.org/mpfr-current/mpfr-3.1.5.tar.xz; tar -xf mpfr-3.1.5.tar.
 git clone -b `echo ${NEWLIB_VERSION} | sed 's/\./_/g'` https://github.com/openrisc/newlib
 git clone -b gdb-${GDB_VERSION}-release git://sourceware.org/git/binutils-gdb.git gdb
 
-JOBS=8 BUILD_MULTICORE=1 ./build.sh
+JOBS=${JOBS} BUILD_MULTICORE=1 ./build.sh
 
 mkdir -p ${OPENRISC_MODULEFILES}
 cat <<EOF > ${OPENRISC_MODULEFILES}/${GCC_VERSION}
