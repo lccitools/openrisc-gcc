@@ -46,6 +46,6 @@ ENV NEWLIB_VERSION=${NEWLIB_VERSION}
 ENV GDB_VERSION=${GDB_VERSION}
 ENV JOBS=8
 
-COPY build.sh /tmp/
+COPY install.sh /tmp/
 
-ENTRYPOINT ["./build.sh"]
+ENTRYPOINT ["./install.sh"]
